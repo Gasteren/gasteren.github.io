@@ -3,46 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlo van Gasteren – CV</title>
+  <title>Carlo van Gasteren – Professional CV</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
       --blue: #0078d4;
-      --accent: #00d4ff;
-      --glass: rgba(255,255,255,0.1);
-      --text: #f0f0f0;
-      --bg: #151515;
+      --text-dark: #1a1a1a;
+      --text-light: #555;
+      --border: #e5e5e5;
+      --bg: #f7f7f7;
+      --section-bg: #ffffff;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: "Montserrat", sans-serif;
-      background: linear-gradient(135deg, #101010, #1f1f1f 60%);
-      color: var(--text);
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.65;
       padding: 40px 20px;
-      min-height: 100vh;
     }
 
-    .container { max-width: 900px; margin: 0 auto; }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
+    /* HEADER */
     .header {
       text-align: center;
-      margin-bottom: 50px;
-      animation: fadeIn 1s;
+      margin-bottom: 40px;
     }
 
     .avatar {
-      width: 170px;
-      height: 170px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto 20px;
-      border: 4px solid rgba(255,255,255,0.25);
-      animation: float 6s ease-in-out infinite;
+      border: 4px solid var(--blue);
     }
 
     .avatar img {
@@ -52,76 +55,92 @@
     }
 
     h1 {
-      font-size: 2.7rem;
+      font-size: 2.4rem;
       font-weight: 700;
-      background: linear-gradient(to right, var(--accent), #fff);
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 5px;
+      color: var(--text-dark);
     }
 
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: var(--blue);
-      margin-bottom: 10px;
+      font-weight: 600;
+      margin-top: 8px;
     }
 
+    /* SECTION */
     .section {
-      background: var(--glass);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 28px;
-      border-radius: 16px;
-      margin-bottom: 30px;
-      animation: fadeUp 1s;
+      background: var(--section-bg);
+      padding: 25px 30px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 25px;
     }
 
     .section h3 {
-      color: var(--accent);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--blue);
       margin-bottom: 12px;
     }
 
-    .section ul { margin-left: 20px; line-height: 1.7; }
+    .section ul {
+      margin-left: 20px;
+      color: var(--text-light);
+    }
 
-    /* Social icons */
+    .section p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
+
+    /* EXPERIENCE TITLES */
+    .role-title {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+
+    .role-date {
+      color: var(--blue);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    /* SOCIAL */
     .social {
-      margin-top: 30px;
+      margin-top: 35px;
+      text-align: center;
       display: flex;
       justify-content: center;
       gap: 20px;
     }
 
     .social a {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-      transition: 0.3s;
+      width: 48px;
+      height: 48px;
+      background: var(--blue);
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      transition: 0.25s;
     }
 
     .social a:hover {
-      transform: translateY(-6px);
-      background: linear-gradient(45deg, var(--blue), var(--accent));
+      background: #005a9e;
+      transform: translateY(-3px);
     }
 
-    /* Animations */
-    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-    @keyframes fadeUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0); }
-    }
   </style>
 </head>
 
 <body>
 <div class="container">
 
+  <!-- HEADER -->
   <div class="header">
     <div class="avatar">
       <img src="https://media.licdn.com/dms/image/v2/D4E03AQHvH9lLr27yAg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718258775514?e=1766620800&v=beta&t=coNyD5Cq3li7srDmJT2ogCGY76iCH1ALsCtnTT-C-Ls" alt="Carlo van Gasteren">
@@ -135,11 +154,11 @@
   <div class="section">
     <h3>Profile</h3>
     <p>
-      Datacenter Shift Technician at Microsoft with strong experience in enterprise hardware, security compliance,
-      access control, incident response, and large-scale infrastructure reliability.  
-      Skilled in diagnosing hardware issues, securing cloud-scale systems, and maintaining high-availability environments.  
-      Completed a Technical Program Manager rotation where I drove process improvements and strengthened operational excellence.  
-      Passionate about cybersecurity, system hardening, and building tools that improve resilience and efficiency. :contentReference[oaicite:1]{index=1}
+      Datacenter Technician at Microsoft with a strong foundation in infrastructure reliability,
+      security practices, and operational excellence. Experienced in enterprise hardware,
+      incident workflows, access control, and maintaining high-availability cloud environments.
+      Completed a Technical Program Manager rotation focused on optimizing processes,
+      reducing risk, and strengthening engineering–operations collaboration.
     </p>
   </div>
 
@@ -147,15 +166,14 @@
   <div class="section">
     <h3>Core Skills</h3>
     <ul>
-      <li>Datacenter Operations & High-Availability Systems</li>
-      <li>Security Engineering & Threat Awareness</li>
-      <li>Hardware Diagnostics (Servers, Network, FRU, DIMMs, GPUs)</li>
+      <li>Datacenter Operations (Azure Infrastructure)</li>
+      <li>Security Engineering & Hardening</li>
       <li>Incident Response & Root Cause Analysis</li>
-      <li>Access Control & Audit Compliance</li>
-      <li>Infrastructure Hardening & Firmware Validation</li>
-      <li>Automation & Scripting (Python, PowerShell)</li>
-      <li>Networking (QSFP28/SFP+, L2/L3 troubleshooting)</li>
-      <li>Change Management & Documentation Excellence</li>
+      <li>Server Hardware Diagnostics (DIMMs, GPUs, FRU replacement)</li>
+      <li>Networking (Fiber, QSFP28/SFP+, L2/L3 troubleshooting)</li>
+      <li>PowerShell & Python Automation</li>
+      <li>Compliance, Access Control & Audit Readiness</li>
+      <li>Technical Program Management (Process Optimization)</li>
     </ul>
   </div>
 
@@ -163,43 +181,44 @@
   <div class="section">
     <h3>Experience</h3>
 
-    <h4>Microsoft — Datacenter Shift Technician (2022–Present)</h4>
+    <p class="role-title">Microsoft — Datacenter Shift Technician</p>
+    <p class="role-date">2022 – Present</p>
     <ul>
-      <li>Maintain and secure enterprise-scale Azure infrastructure across high-availability datacenters. :contentReference[oaicite:2]{index=2}</li>
-      <li>Diagnose, remediate, and document hardware & network issues with strict SLA compliance. :contentReference[oaicite:3]{index=3}</li>
-      <li>Implement and enforce physical security, access controls, and audit standards. :contentReference[oaicite:4]{index=4}</li>
-      <li>Support infrastructure hardening, configuration integrity, and firmware validation. :contentReference[oaicite:5]{index=5}</li>
-      <li>Collaborate with engineering teams on incidents, RCA, and system resilience improvements. :contentReference[oaicite:6]{index=6}</li>
-      <li>Maintain detailed operational documentation and asset lifecycle records. :contentReference[oaicite:7]{index=7}</li>
+      <li>Maintain and secure Azure datacenter infrastructure across high-availability clusters.</li>
+      <li>Perform diagnostics and remediation on server hardware and network components.</li>
+      <li>Ensure compliance with strict security, access control, and audit requirements.</li>
+      <li>Support configuration integrity, firmware validation, and infrastructure hardening.</li>
+      <li>Collaborate with engineering teams during incidents and RCA investigations.</li>
+      <li>Document maintenance, escalations, and corrective actions with high accuracy.</li>
     </ul>
 
     <br>
 
-    <h4>Microsoft — Technical Program Manager Rotation (2025)</h4>
+    <p class="role-title">Microsoft — Technical Program Manager Rotation</p>
+    <p class="role-date">2025</p>
     <ul>
-      <li>Drove process improvements that increased efficiency and reduced operational complexity. :contentReference[oaicite:8]{index=8}</li>
-      <li>Coordinated delivery across engineering, operations, and business teams. :contentReference[oaicite:9]{index=9}</li>
-      <li>Managed technical projects end-to-end with clear milestone execution. :contentReference[oaicite:10]{index=10}</li>
+      <li>Led operational improvement initiatives to streamline workflows and reduce risk.</li>
+      <li>Coordinated delivery with engineering, operations, and business stakeholders.</li>
+      <li>Executed technical projects with clear priorities, planning, and milestone tracking.</li>
     </ul>
 
     <br>
 
-    <h4>Securitas Nederland — Control Room Supervisor (2020–2022)</h4>
+    <p class="role-title">Securitas Nederland — Control Room Supervisor</p>
+    <p class="role-date">2020 – 2022</p>
     <ul>
-      <li>Supervised high-security control room operations & access control. :contentReference[oaicite:11]{index=11}</li>
-      <li>Coordinated incident response and ensured compliance with security protocols. :contentReference[oaicite:12]{index=12}</li>
+      <li>Oversaw high-security control room operations and incident monitoring.</li>
+      <li>Coordinated incident response teams during security events.</li>
+      <li>Enforced compliance with security procedures and reporting standards.</li>
     </ul>
 
-    <h4>Securitas — Responder / Screening Supervisor (2019–2020)</h4>
-    <ul>
-      <li>Responded to incidents, validated access, and conducted threat assessments. :contentReference[oaicite:13]{index=13}</li>
-      <li>Supervised security screening operations and ensured regulatory compliance. :contentReference[oaicite:14]{index=14}</li>
-    </ul>
+    <br>
 
-    <h4>Capgemini — System Administrator (2013–2014)</h4>
+    <p class="role-title">Capgemini — System Administrator</p>
+    <p class="role-date">2013 – 2014</p>
     <ul>
-      <li>Maintained Windows systems, network devices, patching, and endpoint security. :contentReference[oaicite:15]{index=15}</li>
-      <li>Managed user accounts, GPO, backups, and IT infrastructure reliability. :contentReference[oaicite:16]{index=16}</li>
+      <li>Managed Windows systems, network devices, patching, and user access controls.</li>
+      <li>Supported endpoint protection, backups, and troubleshooting for IT environments.</li>
     </ul>
   </div>
 
@@ -207,9 +226,9 @@
   <div class="section">
     <h3>Certifications</h3>
     <ul>
-      <li>BHV — Bedrijfshulpverlening :contentReference[oaicite:17]{index=17}</li>
-      <li>VCA-B Certification :contentReference[oaicite:18]{index=18}</li>
-      <li>Microsoft AZ-900 (Prep Completed) :contentReference[oaicite:19]{index=19}</li>
+      <li>BHV — Bedrijfshulpverlening</li>
+      <li>VCA-B</li>
+      <li>Microsoft AZ-900 (Preparation Complete)</li>
     </ul>
   </div>
 
@@ -217,8 +236,8 @@
   <div class="section">
     <h3>Education</h3>
     <ul>
-      <li>ROC Horizon College — ICT System Administrator / Software Engineer (2012–2014) :contentReference[oaicite:20]{index=20}</li>
-      <li>Zadkine — Security Guard (2019) :contentReference[oaicite:21]{index=21}</li>
+      <li>ROC Horizon College — ICT System Administrator (2012–2014)</li>
+      <li>Zadkine — Security Guard (2019)</li>
     </ul>
   </div>
 
