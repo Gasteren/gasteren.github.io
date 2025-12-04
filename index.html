@@ -1,486 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>van Gasteren - Microsoft Datacenter Technician & Security Engineer</title>
-  <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/kerrtravers/www/master/assets/favicons/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlo van Gasteren – CV</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     :root {
-      --microsoft-blue: #0078d4;
-      --microsoft-gray: #737373;
-      --microsoft-dark: #201f1e;
+      --blue: #0078d4;
       --accent: #00d4ff;
-      --light: #f8f9fa;
-      --card-bg: rgba(255, 255, 255, 0.1);
+      --glass: rgba(255,255,255,0.1);
+      --text: #f0f0f0;
+      --bg: #151515;
     }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--light);
-      background: linear-gradient(135deg, var(--microsoft-dark), #2a2a2a);
+      font-family: "Montserrat", sans-serif;
+      background: linear-gradient(135deg, #101010, #1f1f1f 60%);
+      color: var(--text);
+      padding: 40px 20px;
       min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
-      padding: 20px;
     }
-    
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        radial-gradient(circle at 10% 20%, rgba(0,120,212,0.05) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(0,120,212,0.05) 0%, transparent 20%);
-      z-index: -1;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-      animation: fadeInDown 1s;
-    }
-    
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-    }
-    
-    .logo span {
-      color: var(--microsoft-blue);
-    }
-    
-    .microsoft-badge {
-      background: rgba(0, 120, 212, 0.2);
-      color: var(--microsoft-blue);
-      font-size: 0.9rem;
-      padding: 5px 12px;
-      border-radius: 20px;
-      margin-left: 15px;
-      border: 1px solid var(--microsoft-blue);
-    }
-    
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+    .container { max-width: 900px; margin: 0 auto; }
+
+    .header {
       text-align: center;
-      padding: 60px 20px;
-      margin: 40px 0;
+      margin-bottom: 50px;
       animation: fadeIn 1s;
     }
-    
-    .profile-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px;
-      max-width: 800px;
-      width: 100%;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .profile-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-    }
-    
+
     .avatar {
-      width: 150px;
-      height: 150px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--microsoft-blue), var(--accent));
-      margin: 0 auto 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 5px solid rgba(255, 255, 255, 0.2);
       overflow: hidden;
-      position: relative;
+      margin: 0 auto 20px;
+      border: 4px solid rgba(255,255,255,0.25);
       animation: float 6s ease-in-out infinite;
     }
-    
-    .avatar i {
-      font-size: 5rem;
-      color: white;
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    
-    .name {
-      font-size: 3.5rem;
+
+    h1 {
+      font-size: 2.7rem;
       font-weight: 700;
-      margin-bottom: 10px;
-      background: linear-gradient(to right, var(--accent), #ffffff);
+      background: linear-gradient(to right, var(--accent), #fff);
       -webkit-background-clip: text;
-      background-clip: text;
       color: transparent;
+      margin-bottom: 5px;
     }
-    
-    .title {
-      font-size: 1.8rem;
-      font-weight: 500;
-      margin-bottom: 15px;
-      color: rgba(255, 255, 255, 0.9);
-    }
-    
-    .microsoft-title {
-      color: var(--microsoft-blue);
-      font-weight: 600;
-      display: block;
-      margin-top: 5px;
-    }
-    
-    .bio {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      color: rgba(255, 255, 255, 0.85);
-    }
-    
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 30px;
-    }
-    
-    .social-links a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--light);
-      font-size: 1.8rem;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .social-links a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    
-    .social-links a.github:hover {
-      background: linear-gradient(45deg, #333, #6e5494);
-    }
-    
-    .social-links a.linkedin:hover {
-      background: linear-gradient(45deg, #0077b5, #00a0dc);
-    }
-    
-    .social-links a.x:hover {
-      background: #000000; /* X.com brand color */
-    }
-    
-    /* Custom X.com logo styling */
-    .x-logo {
-      font-weight: 800;
-      font-size: 1.6rem;
-      position: relative;
-      top: -1px;
-    }
-    
-    .expertise {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 40px;
-      animation: fadeInUp 1s;
-    }
-    
-    .expertise-item {
-      background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 25px;
-      text-align: center;
-      width: 220px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-    }
-    
-    .expertise-item:hover {
-      transform: translateY(-10px);
-      background: rgba(0, 120, 212, 0.15);
-    }
-    
-    .expertise-item i {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: var(--accent);
-    }
-    
-    .expertise-item h3 {
-      font-size: 1.4rem;
+
+    h2 {
+      font-size: 1.3rem;
+      color: var(--blue);
       margin-bottom: 10px;
     }
-    
-    .expertise-item p {
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.6;
+
+    .section {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 28px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      animation: fadeUp 1s;
     }
-    
-    .datacenter-section {
-      background: rgba(0, 120, 212, 0.1);
-      border-radius: 20px;
-      padding: 40px;
-      margin: 60px auto;
-      max-width: 800px;
-      border: 1px solid rgba(0, 120, 212, 0.3);
-      text-align: center;
-    }
-    
-    .datacenter-section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
+
+    .section h3 {
       color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 12px;
     }
-    
-    .datacenter-section p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.85);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    
-    .microsoft-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
+
+    .section ul { margin-left: 20px; line-height: 1.7; }
+
+    /* Social icons */
+    .social {
       margin-top: 30px;
-    }
-    
-    .microsoft-item {
-      background: rgba(0, 120, 212, 0.15);
-      padding: 15px;
-      border-radius: 10px;
-      font-size: 0.9rem;
       display: flex;
-      align-items: center;
       justify-content: center;
-      min-height: 80px;
-      text-align: center;
-      transition: all 0.3s ease;
+      gap: 20px;
     }
-    
-    .microsoft-item:hover {
-      transform: translateY(-5px);
-      background: rgba(0, 120, 212, 0.25);
+
+    .social a {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      transition: 0.3s;
     }
-    
-    footer {
-      text-align: center;
-      padding: 40px 0 20px;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.9rem;
-      animation: fadeIn 1s;
+
+    .social a:hover {
+      transform: translateY(-6px);
+      background: linear-gradient(45deg, var(--blue), var(--accent));
     }
-    
-    .highlight {
-      color: var(--accent);
-      font-weight: 600;
-    }
-    
+
     /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes fadeUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
     @keyframes float {
-      0% { transform: translateY(0px); }
+      0% { transform: translateY(0); }
       50% { transform: translateY(-15px); }
-      100% { transform: translateY(0px); }
-    }
-    
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .name {
-        font-size: 2.5rem;
-      }
-      
-      .title {
-        font-size: 1.4rem;
-      }
-      
-      .bio {
-        font-size: 1rem;
-      }
-      
-      .profile-card {
-        padding: 30px 20px;
-      }
-      
-      .expertise {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .social-links a {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-      }
-      
-      .microsoft-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .datacenter-section {
-        padding: 30px 20px;
-      }
+      100% { transform: translateY(0); }
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="logo">van<span>Gasteren</span></div>
-      <div class="microsoft-badge">Microsoft</div>
-    </header>
-    
-    <section class="hero">
-      <div class="profile-card">
-        <div class="avatar">
-          <i class="fas fa-server"></i>
-        </div>
-        <h1 class="name">van Gasteren</h1>
-        <p class="title">
-          Security Engineer<br>
-          <span class="microsoft-title">Datacenter Technician at Microsoft</span>
-        </p>
-        <p class="bio">
-          Maintaining critical infrastructure at Microsoft datacenters while developing my skills as a software engineer. 
-          Passionate about building robust systems that power our digital world.
-        </p>
-        
-        <div class="social-links">
-          <a href="https://github.com/Gasteren" target="_blank" class="github" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/vgasteren/" target="_blank" class="linkedin" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://x.com/vGasteren" target="_blank" class="x" aria-label="X">
-            <span class="x-logo">𝕏</span> 
-            <!-- Created x logo using Mathematical Double-Struck Capital X -->
-          </a>
-        </div>
-      </div>
-    
-      <div class="expertise">
-        <div class="expertise-item">
-          <i class="fas fa-database"></i>
-          <h3>Datacenter Ops</h3>
-          <p>Maintaining and optimizing critical infrastructure in enterprise datacenter environments.</p>
-        </div>
-        
-        <div class="expertise-item">
-          <i class="fas fa-code"></i>
-          <h3>Software Dev</h3>
-          <p>Building applications and scripts to automate processes and improve efficiency.</p>
-        </div>
-        
-        <div class="expertise-item">
-          <i class="fas fa-network-wired"></i>
-          <h3>Networking</h3>
-          <p>Configuring and troubleshooting complex network infrastructure.</p>
-        </div>
-      </div>
-    </section>
-    
-    <section class="datacenter-section">
-      <h2>Microsoft Datacenter Expertise</h2>
-      <p>Working at the heart of Microsoft's cloud infrastructure, ensuring reliability and performance for millions of users worldwide.</p>
-      
-      <div class="microsoft-grid">
-        <div class="microsoft-item">Server Hardware</div>
-        <div class="microsoft-item">Network Infrastructure</div>
-        <div class="microsoft-item">Power Management</div>
-        <div class="microsoft-item">Cooling Systems</div>
-        <div class="microsoft-item">Hardware Diagnostics</div>
-        <div class="microsoft-item">Rack & Stack</div>
-        <div class="microsoft-item">Cable Management</div>
-        <div class="microsoft-item">Troubleshooting</div>
-      </div>
-    </section>
-    
-    <footer>
-      <p>© 2025 van Gasteren. All rights reserved.</p>
-    </footer>
-  </div>
-  
-  <script>
-    // Add animations on scroll
-    document.addEventListener('DOMContentLoaded', function() {
-      const expertiseItems = document.querySelectorAll('.expertise-item');
-      
-      expertiseItems.forEach((item, index) => {
-        // Add delay for staggered animation
-        item.style.animationDelay = `${index * 0.2}s`;
-      });
-      
-      // Add floating animation to avatar
-      const avatar = document.querySelector('.avatar');
-      setInterval(() => {
-        avatar.style.animation = 'float 6s ease-in-out infinite';
-      }, 100);
-    });
-  </script>
-</body>
 
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="avatar">
+      <img src="https://media.licdn.com/dms/image/v2/D4E03AQHvH9lLr27yAg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718258775514?e=1766620800&v=beta&t=coNyD5Cq3li7srDmJT2ogCGY76iCH1ALsCtnTT-C-Ls" alt="Carlo van Gasteren">
+    </div>
+
+    <h1>Carlo van Gasteren</h1>
+    <h2>Microsoft Datacenter Technician • Security Engineering</h2>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="section">
+    <h3>Profile</h3>
+    <p>
+      Datacenter Shift Technician at Microsoft with strong experience in enterprise hardware, security compliance,
+      access control, incident response, and large-scale infrastructure reliability.  
+      Skilled in diagnosing hardware issues, securing cloud-scale systems, and maintaining high-availability environments.  
+      Completed a Technical Program Manager rotation where I drove process improvements and strengthened operational excellence.  
+      Passionate about cybersecurity, system hardening, and building tools that improve resilience and efficiency. :contentReference[oaicite:1]{index=1}
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h3>Core Skills</h3>
+    <ul>
+      <li>Datacenter Operations & High-Availability Systems</li>
+      <li>Security Engineering & Threat Awareness</li>
+      <li>Hardware Diagnostics (Servers, Network, FRU, DIMMs, GPUs)</li>
+      <li>Incident Response & Root Cause Analysis</li>
+      <li>Access Control & Audit Compliance</li>
+      <li>Infrastructure Hardening & Firmware Validation</li>
+      <li>Automation & Scripting (Python, PowerShell)</li>
+      <li>Networking (QSFP28/SFP+, L2/L3 troubleshooting)</li>
+      <li>Change Management & Documentation Excellence</li>
+    </ul>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <h3>Experience</h3>
+
+    <h4>Microsoft — Datacenter Shift Technician (2022–Present)</h4>
+    <ul>
+      <li>Maintain and secure enterprise-scale Azure infrastructure across high-availability datacenters. :contentReference[oaicite:2]{index=2}</li>
+      <li>Diagnose, remediate, and document hardware & network issues with strict SLA compliance. :contentReference[oaicite:3]{index=3}</li>
+      <li>Implement and enforce physical security, access controls, and audit standards. :contentReference[oaicite:4]{index=4}</li>
+      <li>Support infrastructure hardening, configuration integrity, and firmware validation. :contentReference[oaicite:5]{index=5}</li>
+      <li>Collaborate with engineering teams on incidents, RCA, and system resilience improvements. :contentReference[oaicite:6]{index=6}</li>
+      <li>Maintain detailed operational documentation and asset lifecycle records. :contentReference[oaicite:7]{index=7}</li>
+    </ul>
+
+    <br>
+
+    <h4>Microsoft — Technical Program Manager Rotation (2025)</h4>
+    <ul>
+      <li>Drove process improvements that increased efficiency and reduced operational complexity. :contentReference[oaicite:8]{index=8}</li>
+      <li>Coordinated delivery across engineering, operations, and business teams. :contentReference[oaicite:9]{index=9}</li>
+      <li>Managed technical projects end-to-end with clear milestone execution. :contentReference[oaicite:10]{index=10}</li>
+    </ul>
+
+    <br>
+
+    <h4>Securitas Nederland — Control Room Supervisor (2020–2022)</h4>
+    <ul>
+      <li>Supervised high-security control room operations & access control. :contentReference[oaicite:11]{index=11}</li>
+      <li>Coordinated incident response and ensured compliance with security protocols. :contentReference[oaicite:12]{index=12}</li>
+    </ul>
+
+    <h4>Securitas — Responder / Screening Supervisor (2019–2020)</h4>
+    <ul>
+      <li>Responded to incidents, validated access, and conducted threat assessments. :contentReference[oaicite:13]{index=13}</li>
+      <li>Supervised security screening operations and ensured regulatory compliance. :contentReference[oaicite:14]{index=14}</li>
+    </ul>
+
+    <h4>Capgemini — System Administrator (2013–2014)</h4>
+    <ul>
+      <li>Maintained Windows systems, network devices, patching, and endpoint security. :contentReference[oaicite:15]{index=15}</li>
+      <li>Managed user accounts, GPO, backups, and IT infrastructure reliability. :contentReference[oaicite:16]{index=16}</li>
+    </ul>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section">
+    <h3>Certifications</h3>
+    <ul>
+      <li>BHV — Bedrijfshulpverlening :contentReference[oaicite:17]{index=17}</li>
+      <li>VCA-B Certification :contentReference[oaicite:18]{index=18}</li>
+      <li>Microsoft AZ-900 (Prep Completed) :contentReference[oaicite:19]{index=19}</li>
+    </ul>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <h3>Education</h3>
+    <ul>
+      <li>ROC Horizon College — ICT System Administrator / Software Engineer (2012–2014) :contentReference[oaicite:20]{index=20}</li>
+      <li>Zadkine — Security Guard (2019) :contentReference[oaicite:21]{index=21}</li>
+    </ul>
+  </div>
+
+  <!-- SOCIAL -->
+  <div class="social">
+    <a href="https://github.com/Gasteren" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/vgasteren/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="mailto:carlovangasteren@hotmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+
+</div>
+</body>
 </html>
